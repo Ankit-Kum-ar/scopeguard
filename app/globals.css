@@ -2,131 +2,307 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@custom-variant dark (&:is(.dark *));
-
 @theme inline {
-    --font-heading: var(--font-sans);
-    --font-sans: var(--font-sans);
-    --color-sidebar-ring: var(--sidebar-ring);
-    --color-sidebar-border: var(--sidebar-border);
-    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-    --color-sidebar-accent: var(--sidebar-accent);
-    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-    --color-sidebar-primary: var(--sidebar-primary);
-    --color-sidebar-foreground: var(--sidebar-foreground);
-    --color-sidebar: var(--sidebar);
-    --color-chart-5: var(--chart-5);
-    --color-chart-4: var(--chart-4);
-    --color-chart-3: var(--chart-3);
-    --color-chart-2: var(--chart-2);
-    --color-chart-1: var(--chart-1);
-    --color-ring: var(--ring);
-    --color-input: var(--input);
-    --color-border: var(--border);
-    --color-destructive: var(--destructive);
-    --color-accent-foreground: var(--accent-foreground);
-    --color-accent: var(--accent);
-    --color-muted-foreground: var(--muted-foreground);
-    --color-muted: var(--muted);
-    --color-secondary-foreground: var(--secondary-foreground);
-    --color-secondary: var(--secondary);
-    --color-primary-foreground: var(--primary-foreground);
-    --color-primary: var(--primary);
-    --color-popover-foreground: var(--popover-foreground);
-    --color-popover: var(--popover);
-    --color-card-foreground: var(--card-foreground);
-    --color-card: var(--card);
-    --color-foreground: var(--foreground);
-    --color-background: var(--background);
-    --radius-sm: calc(var(--radius) * 0.6);
-    --radius-md: calc(var(--radius) * 0.8);
-    --radius-lg: var(--radius);
-    --radius-xl: calc(var(--radius) * 1.4);
-    --radius-2xl: calc(var(--radius) * 1.8);
-    --radius-3xl: calc(var(--radius) * 2.2);
-    --radius-4xl: calc(var(--radius) * 2.6);
+  --font-heading: var(--font-sans);
+  --font-sans: var(--font-sans);
+
+  /* Exact Figma SaaS Template Palette Mapping */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Precise Figma Radius Hierarchy */
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-3xl: 44px;
+  --radius-full: 9999px;
 }
 
 :root {
-    --background: oklch(1 0 0);
-    --foreground: oklch(0.145 0 0);
-    --card: oklch(1 0 0);
-    --card-foreground: oklch(0.145 0 0);
-    --popover: oklch(1 0 0);
-    --popover-foreground: oklch(0.145 0 0);
-    --primary: oklch(0.205 0 0);
-    --primary-foreground: oklch(0.985 0 0);
-    --secondary: oklch(0.97 0 0);
-    --secondary-foreground: oklch(0.205 0 0);
-    --muted: oklch(0.97 0 0);
-    --muted-foreground: oklch(0.556 0 0);
-    --accent: oklch(0.97 0 0);
-    --accent-foreground: oklch(0.205 0 0);
-    --destructive: oklch(0.577 0.245 27.325);
-    --border: oklch(0.922 0 0);
-    --input: oklch(0.922 0 0);
-    --ring: oklch(0.708 0 0);
-    --chart-1: oklch(0.87 0 0);
-    --chart-2: oklch(0.556 0 0);
-    --chart-3: oklch(0.439 0 0);
-    --chart-4: oklch(0.371 0 0);
-    --chart-5: oklch(0.269 0 0);
-    --radius: 0.625rem;
-    --sidebar: oklch(0.985 0 0);
-    --sidebar-foreground: oklch(0.145 0 0);
-    --sidebar-primary: oklch(0.205 0 0);
-    --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.97 0 0);
-    --sidebar-accent-foreground: oklch(0.205 0 0);
-    --sidebar-border: oklch(0.922 0 0);
-    --sidebar-ring: oklch(0.708 0 0);
-}
-
-.dark {
-    --background: oklch(0.145 0 0);
-    --foreground: oklch(0.985 0 0);
-    --card: oklch(0.205 0 0);
-    --card-foreground: oklch(0.985 0 0);
-    --popover: oklch(0.205 0 0);
-    --popover-foreground: oklch(0.985 0 0);
-    --primary: oklch(0.922 0 0);
-    --primary-foreground: oklch(0.205 0 0);
-    --secondary: oklch(0.269 0 0);
-    --secondary-foreground: oklch(0.985 0 0);
-    --muted: oklch(0.269 0 0);
-    --muted-foreground: oklch(0.708 0 0);
-    --accent: oklch(0.269 0 0);
-    --accent-foreground: oklch(0.985 0 0);
-    --destructive: oklch(0.704 0.191 22.216);
-    --border: oklch(1 0 0 / 10%);
-    --input: oklch(1 0 0 / 15%);
-    --ring: oklch(0.556 0 0);
-    --chart-1: oklch(0.87 0 0);
-    --chart-2: oklch(0.556 0 0);
-    --chart-3: oklch(0.439 0 0);
-    --chart-4: oklch(0.371 0 0);
-    --chart-5: oklch(0.269 0 0);
-    --sidebar: oklch(0.205 0 0);
-    --sidebar-foreground: oklch(0.985 0 0);
-    --sidebar-primary: oklch(0.488 0.243 264.376);
-    --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.269 0 0);
-    --sidebar-accent-foreground: oklch(0.985 0 0);
-    --sidebar-border: oklch(1 0 0 / 10%);
-    --sidebar-ring: oklch(0.556 0 0);
+  /* ========================================================
+     Figma SaaS Landing Page Design System
+     Canvas: #F9FAFD | Accent Surface: #F8F9FD | Brand: #5D5FEF
+     Slate Contrast: #1B1C31 | Subtext: #757095 | Border: #EAECEF
+     ======================================================== */
+  --background: #F9FAFD;
+  --foreground: #1B1C31;
+  
+  --card: #FFFFFF;
+  --card-foreground: #1B1C31;
+  
+  --popover: #FFFFFF;
+  --popover-foreground: #1B1C31;
+  
+  /* Primary Action: Figma Brand Indigo / Violet */
+  --primary: #5D5FEF;
+  --primary-foreground: #FFFFFF;
+  
+  /* Soft Muted Surfaces */
+  --secondary: #F1F4F9;
+  --secondary-foreground: #1B1C31;
+  
+  --muted: #EEF2F6;
+  --muted-foreground: #757095;
+  
+  /* Vibrant Accents */
+  --accent: #FF7F5C;
+  --accent-foreground: #FFFFFF;
+  
+  --destructive: #EF4444;
+  --border: #EAECEF;
+  --input: #EAECEF;
+  --ring: #5D5FEF;
+  --radius: 1.25rem; /* 20px */
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    }
-  body {
-    @apply bg-background text-foreground;
-    }
-  button:not(:disabled), [role="button"]:not(:disabled) {
-    cursor: pointer;
-    }
+    box-sizing: border-box;
+  }
+  
   html {
     @apply font-sans;
-    }
+    color-scheme: light;
+    background-color: #F9FAFD;
+  }
+  
+  body {
+    background-color: #F9FAFD;
+    color: #1B1C31;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  button:not(:disabled), [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+/* ========================================================
+   Figma SaaS Ambient Background Glows & Patterns
+   ======================================================== */
+
+.saas-ambient-mesh {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1440px;
+  height: 680px;
+  background: 
+    radial-gradient(ellipse 60% 50% at 85% 10%, rgba(93, 95, 239, 0.07) 0%, rgba(235, 243, 255, 0.3) 45%, transparent 75%),
+    radial-gradient(ellipse 55% 45% at 15% 5%, rgba(255, 127, 92, 0.05) 0%, rgba(248, 249, 253, 0.25) 45%, transparent 75%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.saas-grid-pattern {
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(27, 28, 49, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(27, 28, 49, 0.025) 1px, transparent 1px);
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 25%, transparent 85%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 25%, transparent 85%);
+}
+
+/* Subtle Hairline Horizontal Divider (GreenBreak style) */
+.hairline-divider {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* ========================================================
+   Figma Card & Elevation Utilities
+   ======================================================== */
+
+.saas-card {
+  background: #FFFFFF;
+  border: 1px solid #EAECEF;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(27, 28, 49, 0.03), 0 8px 24px -4px rgba(27, 28, 49, 0.04);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.saas-card:hover {
+  box-shadow: 0 2px 6px rgba(27, 28, 49, 0.04), 0 14px 32px -6px rgba(27, 28, 49, 0.07);
+  border-color: #DFE2E6;
+}
+
+.saas-card-muted {
+  background: #FFFFFF;
+  border: 1px solid #EAECEF;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(27, 28, 49, 0.02);
+}
+
+/* Signature Figma Hero Floating Input Bar */
+.saas-hero-bar {
+  background: #FFFFFF;
+  border: 1px solid #EAECEF;
+  border-radius: 14px;
+  box-shadow: 0 20px 50px -10px rgba(27, 28, 49, 0.08), 0 4px 16px rgba(27, 28, 49, 0.02);
+}
+
+/* ========================================================
+   Figma Typography Classes
+   ======================================================== */
+
+.saas-hero-title {
+  color: #1B1C31;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.saas-subtext {
+  color: #757095;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  letter-spacing: -0.015em;
+}
+
+.saas-tag {
+  color: #5D5FEF;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* ========================================================
+   Figma Button Styling
+   ======================================================== */
+
+.saas-btn-primary {
+  background-color: #5D5FEF;
+  color: #FFFFFF;
+  height: 50px;
+  border-radius: 10px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(93, 95, 239, 0.22);
+}
+
+.saas-btn-primary:hover {
+  background-color: #4A4CD8;
+  box-shadow: 0 6px 20px rgba(93, 95, 239, 0.32);
+  transform: translateY(-1px);
+}
+
+.saas-btn-dark {
+  background-color: #1B1C31;
+  color: #FFFFFF;
+  height: 50px;
+  border-radius: 10px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.75rem;
+  transition: all 0.2s ease;
+}
+
+.saas-btn-dark:hover {
+  background-color: #2D2E4A;
+  transform: translateY(-1px);
+}
+
+.saas-btn-coral {
+  background-color: #FF7F5C;
+  color: #FFFFFF;
+  height: 48px;
+  border-radius: 9999px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(255, 127, 92, 0.22);
+}
+
+.saas-btn-coral:hover {
+  background-color: #FA6E47;
+  transform: translateY(-1px);
+}
+
+/* ========================================================
+   Print Overrides
+   ======================================================== */
+@media print {
+  @page {
+    margin: 1.2cm 1.4cm;
+    size: auto;
+  }
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .no-print,
+  .print\:hidden {
+    display: none !important;
+  }
+  .print-page {
+    background: #ffffff !important;
+    color: #111827 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow: visible !important;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+  .print-page * {
+    color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Prevent individual cards, matrix boxes, and table rows from splitting across pages */
+  .break-inside-avoid,
+  .print-break-inside-avoid,
+  .print-avoid-break,
+  table,
+  tr,
+  blockquote {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Keep headings attached to following content */
+  h1, h2, h3, h4, h5, h6 {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+  }
 }
